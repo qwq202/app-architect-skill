@@ -6,11 +6,23 @@ It is designed for users who know what they want in ordinary language but do not
 
 ## Install
 
-Copy the skill folder into your Codex skills directory:
+Install globally for Codex:
+
+```bash
+npx -y skills add qwq202/app-architect-skill -g -a codex -s app-architect -y
+```
+
+Install for all detected agents:
+
+```bash
+npx -y skills add qwq202/app-architect-skill -g -s app-architect -y
+```
+
+Install manually:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R app-architect ~/.codex/skills/app-architect
+cp -R skills/app-architect ~/.codex/skills/app-architect
 ```
 
 Restart or refresh Codex so it can discover the skill.
@@ -40,8 +52,9 @@ Use $app-architect. I want to build an app that helps small teams track customer
 ## Contents
 
 ```text
-app-architect/
-  SKILL.md
-  agents/openai.yaml
-  references/architecture-decision-guide.md
+skills/
+  app-architect/
+    SKILL.md
+    agents/openai.yaml
+    references/architecture-decision-guide.md
 ```
